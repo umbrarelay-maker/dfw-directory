@@ -25,12 +25,8 @@ export default function Newsletter() {
             backgroundImage: `url('https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?q=80&w=2071&auto=format&fit=crop')`,
           }}
         />
-        <div className="absolute inset-0 bg-navy-950/85" />
+        <div className="absolute inset-0 bg-ink-950/90" />
       </motion.div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-64 h-64 bg-terracotta-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-sage-500/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -39,7 +35,7 @@ export default function Newsletter() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-1 bg-white/10 backdrop-blur-sm rounded-full text-white/80 text-sm font-medium tracking-wide mb-6">
+          <span className="inline-block text-terracotta-400 text-sm font-medium tracking-wide uppercase mb-6">
             Stay in the Loop
           </span>
           
@@ -65,8 +61,8 @@ export default function Newsletter() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full
-                       text-white placeholder-white/50 focus:outline-none focus:border-terracotta-400/50
+            className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-full
+                       text-white placeholder-white/50 focus:outline-none focus:border-terracotta-400
                        focus:ring-2 focus:ring-terracotta-400/20 transition-all"
           />
           <motion.button

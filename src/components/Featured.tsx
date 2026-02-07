@@ -90,10 +90,10 @@ function FeaturedCard({ listing, index, large = false }: { listing: typeof featu
 
           {/* Category & Rating */}
           <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-            <span className="px-3 py-1.5 bg-black/40 backdrop-blur-sm rounded-full text-white text-xs font-medium tracking-wide">
+            <span className="px-3 py-1.5 bg-black/50 rounded-full text-white text-xs font-medium tracking-wide">
               {listing.category}
             </span>
-            <span className="flex items-center gap-1 px-2.5 py-1.5 bg-black/40 backdrop-blur-sm rounded-full text-white text-sm">
+            <span className="flex items-center gap-1 px-2.5 py-1.5 bg-black/50 rounded-full text-white text-sm">
               <StarIcon className="w-4 h-4 text-amber-400" />
               {listing.rating}
             </span>

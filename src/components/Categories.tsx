@@ -154,7 +154,7 @@ export default function Categories() {
                     {/* Arrow */}
                     <motion.div
                       className="absolute bottom-6 md:bottom-8 right-6 md:right-8 w-12 h-12 rounded-full 
-                                 bg-white/10 backdrop-blur-sm flex items-center justify-center
+                                 bg-white/10 flex items-center justify-center
                                  group-hover:bg-white/20 transition-all duration-300
                                  group-hover:scale-110"
                     >
