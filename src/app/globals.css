@@ -32,11 +32,32 @@ html {
 /* Smooth image loading */
 img {
   opacity: 1;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.4s ease-out;
 }
 
 img[data-loading="true"] {
   opacity: 0;
+}
+
+/* Image placeholder shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.bg-shimmer {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
 
 /* Text balance for headlines */
