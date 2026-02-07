@@ -32,27 +32,8 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Full overlay covering entire hero - outside parallax so it stays fixed */}
-      <div className="absolute inset-0 bg-ink-950/40" />
-      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/50 via-transparent to-ink-950/60" />
-
-      {/* Animated Glow Effects */}
-      <motion.div
-        animate={{ 
-          opacity: [0.3, 0.6, 0.3],
-          scale: [1, 1.2, 1],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-1/4 left-[5%] w-64 h-64 bg-terracotta-500/30 rounded-full blur-[100px]"
-      />
-      <motion.div
-        animate={{ 
-          opacity: [0.2, 0.5, 0.2],
-          scale: [1, 1.3, 1],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-        className="absolute bottom-1/4 right-[10%] w-80 h-80 bg-cyan-500/20 rounded-full blur-[120px]"
-      />
+      {/* Full dark overlay for text readability */}
+      <div className="absolute inset-0 bg-ink-950/50" />
 
       {/* Content */}
       <motion.div
@@ -78,7 +59,7 @@ export default function Hero() {
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]"
+            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight"
           >
             Discover the Best
           </motion.h1>
@@ -99,7 +80,7 @@ export default function Hero() {
             {[...words, words[0]].map((word, i) => (
               <span 
                 key={i} 
-                className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-terracotta-400 h-[1.2em] flex items-center justify-center drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]"
+                className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-terracotta-400 h-[1.2em] flex items-center justify-center"
               >
                 {word}
               </span>
@@ -112,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-2xl text-lg md:text-xl text-white/90 font-light mb-10 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"
+          className="max-w-2xl text-lg md:text-xl text-white font-light mb-10 leading-relaxed"
         >
           From legendary BBQ joints to rooftop cocktails, world-class museums to hidden speakeasies — 
           explore curated recommendations across the metroplex.
