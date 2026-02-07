@@ -15,13 +15,30 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Explore DFW | Discover Dallas-Fort Worth",
-  description: "Your curated guide to the best restaurants, attractions, events, and hidden gems across the Dallas-Fort Worth metroplex.",
-  keywords: ["Dallas", "Fort Worth", "DFW", "things to do", "restaurants", "attractions", "events", "Texas"],
+  title: {
+    default: "Explore DFW | Discover Dallas-Fort Worth",
+    template: "%s | Explore DFW",
+  },
+  description: "Your curated guide to the best restaurants, attractions, events, and hidden gems across the Dallas-Fort Worth metroplex. Discover BBQ, Tex-Mex, museums, nightlife, and more.",
+  keywords: ["Dallas", "Fort Worth", "DFW", "things to do", "restaurants", "attractions", "events", "Texas", "Deep Ellum", "Bishop Arts", "Uptown", "BBQ", "Tex-Mex"],
+  authors: [{ name: "Explore DFW" }],
+  creator: "Explore DFW",
+  metadataBase: new URL("https://dfw-directory.vercel.app"),
   openGraph: {
     title: "Explore DFW | Discover Dallas-Fort Worth",
-    description: "Your curated guide to the best of Dallas-Fort Worth",
+    description: "Your curated guide to the best of Dallas-Fort Worth. 500+ restaurants, 200+ things to do, 15 neighborhoods.",
     type: "website",
+    locale: "en_US",
+    siteName: "Explore DFW",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Explore DFW | Discover Dallas-Fort Worth",
+    description: "Your curated guide to the best of Dallas-Fort Worth",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
