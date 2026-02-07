@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import QuickNav from '@/components/QuickNav';
 import { StarIcon, MapPinIcon } from '@heroicons/react/24/solid';
 
 const categories = [
@@ -81,7 +82,7 @@ const activities = [
 
 export default function ThingsToDoPage() {
   return (
-    <main className="min-h-screen bg-cream-50">
+    <main className="min-h-screen bg-cream-50 flex flex-col">
       <Header />
       
       {/* Hero */}
@@ -207,6 +208,7 @@ export default function ThingsToDoPage() {
         </div>
       </section>
 
+      <QuickNav />
       <Footer />
     </main>
   );

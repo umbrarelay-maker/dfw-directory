@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import QuickNav from '@/components/QuickNav';
 import { CalendarIcon, MapPinIcon, TicketIcon } from '@heroicons/react/24/outline';
 
 const timeFilters = [
@@ -84,7 +85,7 @@ const events = [
 
 export default function EventsPage() {
   return (
-    <main className="min-h-screen bg-cream-50">
+    <main className="min-h-screen bg-cream-50 flex flex-col">
       <Header />
       
       {/* Hero */}
@@ -216,6 +217,7 @@ export default function EventsPage() {
         </div>
       </section>
 
+      <QuickNav />
       <Footer />
     </main>
   );

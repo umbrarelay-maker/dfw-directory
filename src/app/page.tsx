@@ -5,11 +5,12 @@ import Stats from '@/components/Stats';
 import Featured from '@/components/Featured';
 import Neighborhoods from '@/components/Neighborhoods';
 import Newsletter from '@/components/Newsletter';
+import QuickNav from '@/components/QuickNav';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen flex flex-col">
       <Header />
       <Hero />
       <Categories />
@@ -17,6 +18,7 @@ export default function Home() {
       <Featured />
       <Neighborhoods />
       <Newsletter />
+      <QuickNav />
       <Footer />
     </main>
   );
