@@ -53,7 +53,7 @@ const events = [
     name: 'Fort Worth Stock Show & Rodeo',
     category: 'Rodeo',
     venue: 'Will Rogers Memorial Center',
-    image: 'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=500&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1570793005386-4d6e7f3bb3f1?q=80&w=500&auto=format&fit=crop',
     date: 'Through Feb 15',
     time: 'Various',
     price: '$10-50',
