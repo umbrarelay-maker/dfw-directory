@@ -22,7 +22,7 @@ export default function Newsletter() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2144&auto=format&fit=crop')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?q=80&w=2071&auto=format&fit=crop')`,
           }}
         />
         <div className="absolute inset-0 bg-navy-950/85" />
