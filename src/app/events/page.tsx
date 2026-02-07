@@ -120,7 +120,7 @@ export default function EventsPage() {
       </section>
 
       {/* Time Filters */}
-      <section className="border-b border-cream-300 bg-cream-100/50 sticky top-[72px] z-30 backdrop-blur-md">
+      <section className="border-b border-cream-300 bg-cream-100 sticky top-[72px] z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-2 py-4 overflow-x-auto scrollbar-hide">
             {timeFilters.map((filter, index) => (

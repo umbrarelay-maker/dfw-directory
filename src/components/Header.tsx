@@ -32,7 +32,7 @@ export default function Header() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'bg-cream-50/95 backdrop-blur-md shadow-sm py-3'
+            ? 'bg-cream-50 shadow-sm py-3'
             : 'bg-transparent py-5'
         }`}
       >
@@ -117,7 +117,7 @@ export default function Header() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 lg:hidden"
           >
-            <div className="absolute inset-0 bg-ink-950/60 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
+            <div className="absolute inset-0 bg-ink-950/80" onClick={() => setIsMobileMenuOpen(false)} />
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}

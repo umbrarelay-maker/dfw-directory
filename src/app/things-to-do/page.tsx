@@ -117,7 +117,7 @@ export default function ThingsToDoPage() {
       </section>
 
       {/* Categories */}
-      <section className="border-b border-cream-300 bg-cream-100/50 sticky top-[72px] z-30 backdrop-blur-md">
+      <section className="border-b border-cream-300 bg-cream-100 sticky top-[72px] z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-2 py-4 overflow-x-auto scrollbar-hide">
             {categories.map((cat, index) => (
@@ -160,10 +160,10 @@ export default function ThingsToDoPage() {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-3 right-3 flex gap-2">
-                      <span className="px-2 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-ink-700">
+                      <span className="px-2 py-1 bg-white shadow-sm rounded-full text-xs font-medium text-ink-700">
                         {activity.priceRange}
                       </span>
-                      <span className="inline-flex items-center gap-1 px-2 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium">
+                      <span className="inline-flex items-center gap-1 px-2 py-1 bg-white shadow-sm rounded-full text-xs font-medium">
                         <StarIcon className="w-3 h-3 text-amber-500" />
                         {activity.rating}
                       </span>
