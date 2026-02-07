@@ -30,9 +30,9 @@ export default function Hero() {
             backgroundImage: `url('https://images.unsplash.com/photo-1531218150217-54595bc2b934?q=80&w=2128&auto=format&fit=crop')`,
           }}
         />
-        {/* Multi-layer gradient for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/40 via-ink-950/20 to-ink-950/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/30 via-transparent to-ink-950/30" />
+        {/* Multi-layer gradient for depth - stronger for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-ink-950/40 to-ink-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/40 via-transparent to-ink-950/40" />
       </motion.div>
 
       {/* Animated Glow Effects */}

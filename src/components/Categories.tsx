@@ -110,9 +110,9 @@ export default function Categories() {
                     />
                   </div>
                   
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/30 to-transparent 
-                                  opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
+                  {/* Gradient Overlay - stronger for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/50 to-ink-950/20 
+                                  group-hover:from-ink-950/100 transition-all duration-500" />
                   
                   {/* Colored Accent Line */}
                   <motion.div

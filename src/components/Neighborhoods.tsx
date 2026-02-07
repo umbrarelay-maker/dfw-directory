@@ -103,9 +103,9 @@ export default function Neighborhoods() {
                     />
                   </div>
                   
-                  {/* Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/50 to-transparent 
-                                  opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
+                  {/* Gradient - stronger for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/60 to-ink-950/20 
+                                  group-hover:via-ink-950/70 transition-all duration-500" />
                   
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6">

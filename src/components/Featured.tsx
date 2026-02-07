@@ -81,9 +81,9 @@ function FeaturedCard({ listing, index }: { listing: typeof featuredListings[0];
           />
         </div>
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/40 to-transparent 
-                        opacity-70 group-hover:opacity-85 transition-opacity duration-500" />
+        {/* Gradient overlay - stronger for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/50 to-ink-950/10 
+                        group-hover:from-ink-950/100 transition-all duration-500" />
 
         {/* Category badge */}
         <div className="absolute top-4 left-4">
