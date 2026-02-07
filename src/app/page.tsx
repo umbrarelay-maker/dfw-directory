@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Categories from '@/components/Categories';
+import ThisWeek from '@/components/ThisWeek';
 import Stats from '@/components/Stats';
 import Featured from '@/components/Featured';
 import Neighborhoods from '@/components/Neighborhoods';
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Categories />
+      <ThisWeek />
       <Stats />
       <Featured />
       <Neighborhoods />
