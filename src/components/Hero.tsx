@@ -30,9 +30,10 @@ export default function Hero() {
             backgroundImage: `url('https://images.unsplash.com/photo-1531218150217-54595bc2b934?q=80&w=2128&auto=format&fit=crop')`,
           }}
         />
-        {/* Multi-layer gradient for depth - stronger for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-ink-950/40 to-ink-950/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/40 via-transparent to-ink-950/40" />
+        {/* Strong overlay for text readability on bright images */}
+        <div className="absolute inset-0 bg-ink-950/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/50 to-ink-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/30 via-transparent to-ink-950/30" />
       </motion.div>
 
       {/* Animated Glow Effects */}
@@ -77,7 +78,7 @@ export default function Hero() {
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight"
+            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]"
           >
             Discover the Best
           </motion.h1>
@@ -98,7 +99,7 @@ export default function Hero() {
             {[...words, words[0]].map((word, i) => (
               <span 
                 key={i} 
-                className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-terracotta-400 h-[1.2em] flex items-center justify-center"
+                className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-terracotta-400 h-[1.2em] flex items-center justify-center drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]"
               >
                 {word}
               </span>
@@ -111,7 +112,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-2xl text-lg md:text-xl text-white/80 font-light mb-10 leading-relaxed"
+          className="max-w-2xl text-lg md:text-xl text-white/90 font-light mb-10 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"
         >
           From legendary BBQ joints to rooftop cocktails, world-class museums to hidden speakeasies — 
           explore curated recommendations across the metroplex.
