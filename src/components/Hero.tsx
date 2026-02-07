@@ -23,11 +23,11 @@ export default function Hero() {
         style={{ y, scale }}
         className="absolute inset-0"
       >
-        {/* Dallas Skyline - Reunion Tower & Downtown */}
+        {/* Dallas Skyline at Dusk */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1531218150217-54595bc2b934?q=80&w=2128&auto=format&fit=crop')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1545194445-dddb8f4487c6?q=80&w=2070&auto=format&fit=crop')`,
           }}
         />
       </motion.div>
