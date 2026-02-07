@@ -85,6 +85,29 @@ export default function Newsletter() {
         >
           No spam, unsubscribe anytime. We respect your inbox.
         </motion.p>
+
+        {/* Social proof */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="mt-12 flex flex-col items-center"
+        >
+          <div className="flex -space-x-2 mb-3">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div
+                key={i}
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-terracotta-400 to-terracotta-600 border-2 border-ink-950 flex items-center justify-center text-white text-xs font-bold"
+              >
+                {String.fromCharCode(64 + i)}
+              </div>
+            ))}
+          </div>
+          <p className="text-white/60 text-sm">
+            Join <span className="text-white font-medium">50,000+</span> DFW locals who get our weekly picks
+          </p>
+        </motion.div>
       </div>
     </section>
   );
