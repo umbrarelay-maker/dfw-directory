@@ -1,111 +1,75 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRef } from 'react';
 
 export default function Newsletter() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
-    <section ref={sectionRef} className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background Image */}
-      <motion.div
-        style={{ y }}
-        className="absolute inset-0 -z-10"
-      >
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?q=80&w=2071&auto=format&fit=crop')`,
-          }}
-        />
-        <div className="absolute inset-0 bg-ink-950/90" />
-      </motion.div>
-
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section ref={sectionRef} className="py-24 md:py-32 bg-cream-100 border-y border-cream-300">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block text-terracotta-400 text-sm font-medium tracking-wide uppercase mb-6">
-            Stay in the Loop
+          {/* Editorial header */}
+          <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-terracotta-600 mb-6">
+            The Weekly
           </span>
           
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight mb-6">
-            Never Miss the
-            <br />
-            <span className="text-terracotta-400">Best of DFW</span>
+          <h2 className="font-serif text-4xl md:text-5xl text-ink-900 font-medium tracking-tight mb-6 leading-tight">
+            Get the inside scoop on DFW
           </h2>
           
-          <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-            Get weekly picks, new openings, and insider tips delivered straight to your inbox. 
-            Join thousands of DFW explorers.
+          <p className="text-lg text-ink-600 mb-10 max-w-xl mx-auto leading-relaxed">
+            New openings, seasonal picks, and local secrets — delivered to your inbox every Friday morning.
           </p>
         </motion.div>
 
         <motion.form
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto"
+          className="max-w-md mx-auto"
         >
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-full
-                       text-white placeholder-white/50 focus:outline-none focus:border-terracotta-400
-                       focus:ring-2 focus:ring-terracotta-400/20 transition-all"
-          />
-          <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            type="submit"
-            className="px-8 py-4 bg-terracotta-500 hover:bg-terracotta-600 text-white font-medium rounded-full 
-                       transition-colors shadow-lg shadow-terracotta-500/30"
-          >
-            Subscribe
-          </motion.button>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="flex-1 px-5 py-4 bg-white border border-ink-200 
+                         text-ink-900 placeholder-ink-400 focus:outline-none focus:border-terracotta-500
+                         focus:ring-1 focus:ring-terracotta-500 transition-all text-center sm:text-left"
+            />
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              type="submit"
+              className="px-8 py-4 bg-ink-900 hover:bg-ink-800 text-white text-sm font-medium uppercase tracking-widest
+                         transition-colors"
+            >
+              Subscribe
+            </motion.button>
+          </div>
+          
+          <p className="mt-4 text-ink-500 text-sm">
+            No spam. Unsubscribe anytime.
+          </p>
         </motion.form>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-6 text-white/50 text-sm"
-        >
-          No spam, unsubscribe anytime. We respect your inbox.
-        </motion.p>
-
-        {/* Social proof */}
+        {/* Social proof - subtle */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="mt-12 flex flex-col items-center"
+          className="mt-12 pt-12 border-t border-cream-300"
         >
-          <div className="flex -space-x-2 mb-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div
-                key={i}
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-terracotta-400 to-terracotta-600 border-2 border-ink-950 flex items-center justify-center text-white text-xs font-bold"
-              >
-                {String.fromCharCode(64 + i)}
-              </div>
-            ))}
-          </div>
-          <p className="text-white/60 text-sm">
-            Join <span className="text-white font-medium">50,000+</span> DFW locals who get our weekly picks
+          <p className="text-ink-500 text-sm">
+            Trusted by <span className="text-ink-800 font-medium">50,000+</span> DFW locals
           </p>
         </motion.div>
       </div>

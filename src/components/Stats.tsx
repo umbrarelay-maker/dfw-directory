@@ -8,25 +8,25 @@ const stats = [
     value: 500, 
     suffix: '+', 
     label: 'Restaurants & Bars',
-    description: 'From hidden gems to iconic spots'
+    accent: 'From neighborhood joints to fine dining'
   },
   { 
     value: 200, 
     suffix: '+', 
     label: 'Things to Do',
-    description: 'Adventures for every interest'
+    accent: 'Museums, trails, and hidden gems'
   },
   { 
     value: 15, 
     suffix: '', 
     label: 'Neighborhoods',
-    description: 'Each with its own character'
+    accent: 'Each with its own story'
   },
   { 
     value: 50, 
-    suffix: 'K+', 
-    label: 'Monthly Explorers',
-    description: 'Join our community'
+    suffix: 'K', 
+    label: 'Monthly Readers',
+    accent: 'And growing every day'
   },
 ];
 
@@ -66,66 +66,73 @@ export default function Stats() {
   const isInView = useInView(containerRef, { once: true, margin: '-100px' });
 
   return (
-    <section ref={containerRef} className="py-20 md:py-28 bg-ink-950 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-terracotta-500/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sage-500/20 rounded-full blur-[120px]" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Section header */}
+    <section ref={containerRef} className="py-24 md:py-32 bg-cream-50 relative overflow-hidden">
+      {/* Subtle editorial line accent */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-transparent via-ink-200 to-transparent" />
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Editorial header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
-          <h2 className="font-serif text-3xl md:text-4xl text-white font-bold mb-4">
-            Your Guide to the Metroplex
+          <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-terracotta-600 mb-4">
+            By the Numbers
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-ink-900 font-medium tracking-tight max-w-2xl mx-auto leading-tight">
+            We&apos;ve spent years curating the best of Dallas-Fort Worth
           </h2>
-          <p className="text-ink-400 max-w-xl mx-auto">
-            We&apos;ve curated the best of Dallas-Fort Worth so you can spend less time searching and more time exploring.
-          </p>
         </motion.div>
 
-        {/* Stats grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        {/* Stats - Editorial grid with dividers */}
+        <div className="grid grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center"
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className={`relative py-8 lg:py-0 ${
+                index < 2 ? 'border-b border-ink-200 lg:border-b-0' : ''
+              } ${
+                index % 2 === 0 ? 'pr-6 lg:pr-8' : 'pl-6 lg:pl-8'
+              } ${
+                index > 0 ? 'lg:border-l lg:border-ink-200' : ''
+              }`}
             >
-              <motion.div 
-                className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-terracotta-500/20 to-terracotta-500/5 mb-6"
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                <div className="font-serif text-2xl font-bold text-terracotta-400">
-                  {index === 0 && '🍽️'}
-                  {index === 1 && '🎯'}
-                  {index === 2 && '🏘️'}
-                  {index === 3 && '👥'}
+              <div className="lg:px-6">
+                {/* The big number */}
+                <div className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium text-ink-900 tracking-tight mb-3">
+                  <AnimatedNumber value={stat.value} suffix={stat.suffix} />
                 </div>
-              </motion.div>
-              
-              <div className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
-                <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-              </div>
-              
-              <div className="text-white font-medium mb-1">
-                {stat.label}
-              </div>
-              
-              <div className="text-ink-500 text-sm">
-                {stat.description}
+                
+                {/* Label */}
+                <div className="text-sm font-medium text-ink-800 uppercase tracking-wide mb-2">
+                  {stat.label}
+                </div>
+                
+                {/* Editorial accent text */}
+                <div className="text-sm text-ink-500 italic font-serif">
+                  {stat.accent}
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom editorial quote */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-20 pt-12 border-t border-ink-200 text-center"
+        >
+          <p className="font-serif text-lg md:text-xl text-ink-600 italic max-w-2xl mx-auto">
+            &ldquo;Spend less time searching, more time exploring.&rdquo;
+          </p>
+        </motion.div>
       </div>
     </section>
   );
