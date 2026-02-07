@@ -33,7 +33,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Full dark overlay for text readability */}
-      <div className="absolute inset-0 bg-ink-950/50" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <motion.div
@@ -47,7 +47,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-6"
         >
-          <span className="inline-flex items-center gap-2 px-5 py-2 bg-white/15 rounded-full text-white/90 text-sm font-medium tracking-wide border border-white/20">
+          <span className="inline-flex items-center gap-2 text-white/80 text-sm font-medium tracking-wide uppercase">
             <span className="w-2 h-2 rounded-full bg-terracotta-400 animate-pulse" />
             Your Guide to Dallas-Fort Worth
           </span>
@@ -122,8 +122,8 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.03, y: -3 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-white/15 hover:bg-white/25 text-white font-semibold 
-                       rounded-full border border-white/30 hover:border-white/50 transition-all"
+            className="px-8 py-4 text-white font-semibold rounded-full border-2 border-white/60 
+                       hover:border-white hover:bg-white/10 transition-all"
           >
             This Weekend&apos;s Events
           </motion.button>

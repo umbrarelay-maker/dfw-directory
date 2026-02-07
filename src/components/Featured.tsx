@@ -14,6 +14,7 @@ const featuredListings = [
     rating: 4.8,
     description: 'Legendary Texas BBQ with lines around the block',
     featured: true,
+    gridClass: 'md:col-span-2 md:row-span-2',
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const featuredListings = [
     image: 'https://images.unsplash.com/photo-1531218150217-54595bc2b934?q=80&w=2028&auto=format&fit=crop',
     rating: 4.6,
     description: 'Iconic observation deck with 360° views',
+    gridClass: 'md:col-start-3 md:row-start-1',
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const featuredListings = [
     image: 'https://images.unsplash.com/photo-1519999482648-25049ddd37b1?q=80&w=2026&auto=format&fit=crop',
     rating: 4.7,
     description: 'Eclectic shops, galleries, and restaurants',
+    gridClass: 'md:col-start-3 md:row-start-2',
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const featuredListings = [
     image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=2070&auto=format&fit=crop',
     rating: 4.9,
     description: 'Award-winning contemporary Japanese cuisine',
+    gridClass: 'md:col-start-1 md:row-start-3',
   },
   {
     id: 5,
@@ -50,6 +54,17 @@ const featuredListings = [
     image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2032&auto=format&fit=crop',
     rating: 4.8,
     description: '66-acre botanical paradise on White Rock Lake',
+    gridClass: 'md:col-start-2 md:row-start-3',
+  },
+  {
+    id: 6,
+    name: 'Fort Worth Stockyards',
+    category: 'Attraction',
+    neighborhood: 'Fort Worth',
+    image: 'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=1974&auto=format&fit=crop',
+    rating: 4.7,
+    description: 'Historic district with daily cattle drives',
+    gridClass: 'md:col-start-3 md:row-start-3',
   },
 ];
 
@@ -67,7 +82,7 @@ function FeaturedCard({ listing, index }: { listing: typeof featuredListings[0];
         delay: index * 0.1,
         ease: "easeOut" 
       }}
-      className={`group relative ${listing.featured ? 'md:col-span-2 md:row-span-2' : ''}`}
+      className={`group relative ${listing.gridClass || ''}`}
     >
       <div className={`relative overflow-hidden rounded-2xl bg-ink-100 card-hover ${
         listing.featured ? 'aspect-[16/12] md:aspect-[16/9]' : 'aspect-[4/5]'
@@ -192,7 +207,7 @@ export default function Featured() {
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-5 md:gap-6">
           {featuredListings.map((listing, index) => (
             <FeaturedCard key={listing.id} listing={listing} index={index} />
           ))}
