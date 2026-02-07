@@ -4,6 +4,7 @@ import Categories from '@/components/Categories';
 import ThisWeek from '@/components/ThisWeek';
 import Stats from '@/components/Stats';
 import Featured from '@/components/Featured';
+import PopularGuides from '@/components/PopularGuides';
 import Neighborhoods from '@/components/Neighborhoods';
 import Newsletter from '@/components/Newsletter';
 import QuickNav from '@/components/QuickNav';
@@ -18,6 +19,7 @@ export default function Home() {
       <ThisWeek />
       <Stats />
       <Featured />
+      <PopularGuides />
       <Neighborhoods />
       <Newsletter />
       <QuickNav />
