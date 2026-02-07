@@ -34,6 +34,9 @@ export default function Hero() {
 
       {/* Full dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/60" />
+      
+      {/* Subtle gradient accent */}
+      <div className="absolute inset-0 bg-gradient-to-br from-terracotta-900/20 via-transparent to-navy-900/20" />
 
       {/* Content */}
       <motion.div
