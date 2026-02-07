@@ -30,10 +30,8 @@ export default function Hero() {
             backgroundImage: `url('https://images.unsplash.com/photo-1531218150217-54595bc2b934?q=80&w=2128&auto=format&fit=crop')`,
           }}
         />
-        {/* Strong overlay for text readability on bright images */}
-        <div className="absolute inset-0 bg-ink-950/50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/50 to-ink-950/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/30 via-transparent to-ink-950/30" />
+        {/* Full overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-ink-950/40 to-ink-950/70" />
       </motion.div>
 
       {/* Animated Glow Effects */}
@@ -66,7 +64,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-6"
         >
-          <span className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 backdrop-blur-md rounded-full text-white/90 text-sm font-medium tracking-wide border border-white/10">
+          <span className="inline-flex items-center gap-2 px-5 py-2 bg-white/15 rounded-full text-white/90 text-sm font-medium tracking-wide border border-white/20">
             <span className="w-2 h-2 rounded-full bg-terracotta-400 animate-pulse" />
             Your Guide to Dallas-Fort Worth
           </span>
@@ -141,8 +139,8 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.03, y: -3 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold 
-                       rounded-full border border-white/20 hover:border-white/40 transition-all"
+            className="px-8 py-4 bg-white/15 hover:bg-white/25 text-white font-semibold 
+                       rounded-full border border-white/30 hover:border-white/50 transition-all"
           >
             This Weekend&apos;s Events
           </motion.button>
