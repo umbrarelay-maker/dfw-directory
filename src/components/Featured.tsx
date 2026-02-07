@@ -65,7 +65,7 @@ function FeaturedCard({ listing, index }: { listing: typeof featuredListings[0];
       transition={{ 
         duration: 0.7, 
         delay: index * 0.1,
-        ease: [0.25, 1, 0.5, 1] 
+        ease: "easeOut" 
       }}
       className={`group relative ${listing.featured ? 'md:col-span-2 md:row-span-2' : ''}`}
     >

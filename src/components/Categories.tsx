@@ -55,7 +55,7 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.25, 1, 0.5, 1],
+      ease: "easeOut",
     },
   },
 };
@@ -119,7 +119,7 @@ export default function Categories() {
                     initial={{ width: 0 }}
                     whileInView={{ width: '100%' }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5 + index * 0.1, duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                    transition={{ delay: 0.5 + index * 0.1, duration: 0.8, ease: "easeOut" }}
                     className={`absolute bottom-0 left-0 h-1 ${
                       category.color === 'terracotta' ? 'bg-terracotta-500' :
                       category.color === 'sage' ? 'bg-sage-500' : 'bg-navy-500'
