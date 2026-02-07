@@ -30,9 +30,11 @@ export default function Hero() {
             backgroundImage: `url('https://images.unsplash.com/photo-1531218150217-54595bc2b934?q=80&w=2128&auto=format&fit=crop')`,
           }}
         />
-        {/* Full overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-ink-950/40 to-ink-950/70" />
       </motion.div>
+
+      {/* Full overlay covering entire hero - outside parallax so it stays fixed */}
+      <div className="absolute inset-0 bg-ink-950/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink-950/50 via-transparent to-ink-950/60" />
 
       {/* Animated Glow Effects */}
       <motion.div
