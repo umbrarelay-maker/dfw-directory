@@ -34,7 +34,7 @@ const guides = [
     id: 4,
     title: 'Free Things to Do',
     subtitle: 'Budget-friendly adventures',
-    image: 'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=800&auto=format&fit=crop',
     href: '/guides/free-activities',
     trending: false,
   },
