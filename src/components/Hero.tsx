@@ -144,18 +144,20 @@ export default function Hero() {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="absolute bottom-24 left-0 right-0"
         >
-          <div className="flex justify-center gap-8 md:gap-16 text-white/60">
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white">500+</div>
-              <div className="text-xs md:text-sm">Restaurants</div>
+          <div className="flex justify-center gap-6 md:gap-12">
+            <div className="text-center px-4 md:px-6">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">500+</div>
+              <div className="text-xs md:text-sm text-white/60 uppercase tracking-wider">Restaurants</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white">200+</div>
-              <div className="text-xs md:text-sm">Things to Do</div>
+            <div className="h-12 w-px bg-white/20 hidden md:block" />
+            <div className="text-center px-4 md:px-6">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">200+</div>
+              <div className="text-xs md:text-sm text-white/60 uppercase tracking-wider">Things to Do</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white">15</div>
-              <div className="text-xs md:text-sm">Neighborhoods</div>
+            <div className="h-12 w-px bg-white/20 hidden md:block" />
+            <div className="text-center px-4 md:px-6">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">15</div>
+              <div className="text-xs md:text-sm text-white/60 uppercase tracking-wider">Neighborhoods</div>
             </div>
           </div>
         </motion.div>
