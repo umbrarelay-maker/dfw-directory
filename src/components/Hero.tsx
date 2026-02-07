@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
 
 const words = ['Restaurants', 'Adventures', 'Events', 'Hidden Gems'];
 
@@ -109,27 +110,31 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <motion.button
-            whileHover={{ scale: 1.03, y: -3 }}
-            whileTap={{ scale: 0.98 }}
-            className="group px-8 py-4 bg-terracotta-500 hover:bg-terracotta-400 text-white font-semibold rounded-full 
-                       transition-all shadow-xl shadow-terracotta-500/25 hover:shadow-terracotta-500/40"
-          >
-            <span className="flex items-center gap-2">
-              Start Exploring
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.03, y: -3 }}
-            whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 text-white font-semibold rounded-full border-2 border-white/60 
-                       hover:border-white hover:bg-white/10 transition-all"
-          >
-            This Weekend&apos;s Events
-          </motion.button>
+          <Link href="/eat-drink">
+            <motion.button
+              whileHover={{ scale: 1.03, y: -3 }}
+              whileTap={{ scale: 0.98 }}
+              className="group px-8 py-4 bg-terracotta-500 hover:bg-terracotta-400 text-white font-semibold rounded-full 
+                         transition-all shadow-xl shadow-terracotta-500/25 hover:shadow-terracotta-500/40"
+            >
+              <span className="flex items-center gap-2">
+                Start Exploring
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </motion.button>
+          </Link>
+          <Link href="/events">
+            <motion.button
+              whileHover={{ scale: 1.03, y: -3 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-8 py-4 text-white font-semibold rounded-full border-2 border-white/60 
+                         hover:border-white hover:bg-white/10 transition-all"
+            >
+              This Weekend&apos;s Events
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* Quick Stats */}
