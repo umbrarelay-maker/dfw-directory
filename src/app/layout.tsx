@@ -49,6 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="600ed206-3e27-42ff-b56e-009d16b3accb" />
+      </head>
       <body className="font-sans bg-cream-50 text-ink-900 antialiased">
         {children}
       </body>
